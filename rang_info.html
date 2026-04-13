@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Rang info</title>
+</head>
+<body>
+
+<h2>Rang haqida</h2>
+
+{% if topildi %}
+    <p><b>Rang:</b> {{ rang }}</p>
+    <p><b>Harflar soni:</b> {{ uzunlik }}</p>
+    <p><b>Ro'yxatdagi o‘rni:</b> {{ indeks }}</p>
+{% else %}
+    <p>Rang topilmadi ❌</p>
+
+    <h3>Mavjud ranglar:</h3>
+    <ul>
+        {% for r in ranglar %}
+            <li>{{ r }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+</body>
+</html>
